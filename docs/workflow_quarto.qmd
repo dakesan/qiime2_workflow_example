@@ -1,0 +1,96 @@
+---
+title: "Qiime2 workflow"
+format: html
+date: "2022-09-30"
+---
+
+## activate conda
+
+```{bash}
+#| eval: false
+conda activate qiime2-2020.08
+```
+
+## denoise
+
+```{bash}
+#| eval: false
+qiime dada2 denoise-single \
+--p-trim-left 13 \
+--p-trunc-len 150 \
+--i-demultiplexed-seqs q2_core_data/sequence/demux1.qza \
+--o-representative-sequences q2_core_data/sequence/rep_seq1.qza \
+--o-table q2_core_data/feature/feature_table1.qza \
+--o-denoising-stats q2_core_data/feature/denoise_stats1.qza \
+--p-n-threads 4
+```
+
+```{bash}
+#| eval: false
+qiime dada2 denoise-single \
+--p-trim-left 13 \
+--p-trunc-len 150 \
+--i-demultiplexed-seqs q2_core_data/sequence/demux2.qza \
+--o-representative-sequences q2_core_data/sequence/rep_seq2.qza \
+--o-table q2_core_data/feature/feature_table2.qza \
+--o-denoising-stats q2_core_data/feature/denoise_stats2.qza \
+--p-n-threads 4
+```
+
+## 省略
+
+...
+
+## diversity analysis
+
+```{bash}
+#| eval: false
+qiime phylogeny align-to-tree-mafft-fasttree \
+--i-sequences ./q2_core_data/sequence/rep_seq.qza \
+--o-alignment ./q2_core_data/sequence/aligned_rep_seq.qza \
+--o-masked-alignment ./q2_core_data/sequence/masked_aligned_rep_seq.qza \
+--o-tree ./q2_core_data/taxonomy/unrooted_tree.qza \
+--o-rooted-tree ./q2_core_data/taxonomy/rooted_tree.qza
+
+rm -r ./statistics/core_metrics
+
+qiime diversity core-metrics-phylogenetic \
+--i-phylogeny ./q2_core_data/taxonomy/rooted_tree.qza \
+--i-table ./q2_core_data/feature/feature_table.qza \
+--p-sampling-depth 1103 \
+--m-metadata-file ./prep_data/metadata.tsv \
+--output-dir ./statistics/core_metrics
+
+mv ./statistics/core_metrics/bray* ./statistics/beta_diversity/
+mv ./statistics/core_metrics/jaccard* ./statistics/beta_diversity/
+
+mv ./statistics/core_metrics/*vector.qza ./statistics/alpha_diversity/
+```
+
+outputs:
+
+```{bash}
+#| eval: false
+Saved FeatureData[AlignedSequence] to: ./q2_core_data/sequence/aligned_rep_seq.qza
+Saved FeatureData[AlignedSequence] to: ./q2_core_data/sequence/masked_aligned_rep_seq.qza
+Saved Phylogeny[Unrooted] to: ./q2_core_data/taxonomy/unrooted_tree.qza
+Saved Phylogeny[Rooted] to: ./q2_core_data/taxonomy/rooted_tree.qza
+Saved FeatureTable[Frequency] to: ./statistics/core_metrics/rarefied_table.qza
+Saved SampleData[AlphaDiversity] to: ./statistics/core_metrics/faith_pd_vector.qza
+Saved SampleData[AlphaDiversity] to: ./statistics/core_metrics/observed_features_vector.qza
+Saved SampleData[AlphaDiversity] to: ./statistics/core_metrics/shannon_vector.qza
+Saved SampleData[AlphaDiversity] to: ./statistics/core_metrics/evenness_vector.qza
+Saved DistanceMatrix to: ./statistics/core_metrics/unweighted_unifrac_distance_matrix.qza
+Saved DistanceMatrix to: ./statistics/core_metrics/weighted_unifrac_distance_matrix.qza
+Saved DistanceMatrix to: ./statistics/core_metrics/jaccard_distance_matrix.qza
+Saved DistanceMatrix to: ./statistics/core_metrics/bray_curtis_distance_matrix.qza
+Saved PCoAResults to: ./statistics/core_metrics/unweighted_unifrac_pcoa_results.qza
+Saved PCoAResults to: ./statistics/core_metrics/weighted_unifrac_pcoa_results.qza
+Saved PCoAResults to: ./statistics/core_metrics/jaccard_pcoa_results.qza
+Saved PCoAResults to: ./statistics/core_metrics/bray_curtis_pcoa_results.qza
+Saved Visualization to: ./statistics/core_metrics/unweighted_unifrac_emperor.qzv
+Saved Visualization to: ./statistics/core_metrics/weighted_unifrac_emperor.qzv
+Saved Visualization to: ./statistics/core_metrics/jaccard_emperor.qzv
+Saved Visualization to: ./statistics/core_metrics/bray_curtis_emperor.qzv
+```
+

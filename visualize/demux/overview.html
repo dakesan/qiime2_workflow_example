@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_demux : summarize</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/child.js"></script>
+    
+    
+  </head>
+  <body>
+    <div class="container-fluid">
+        
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Demultiplexed sequence counts summary</h1>
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>forward reads</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Minimum</th>
+      <td>1208</td>
+    </tr>
+    <tr>
+      <th>Median</th>
+      <td>4324.0</td>
+    </tr>
+    <tr>
+      <th>Mean</th>
+      <td>4578.506849</td>
+    </tr>
+    <tr>
+      <th>Maximum</th>
+      <td>8918</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td>334231</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</div>
+
+<div class="row">
+    
+        <div class="col-lg-6">
+            <h3>Forward Reads Frequency Histogram</h3>
+            <div class="text-center">
+                
+                    <a href="demultiplex-summary-forward.pdf">
+                        <img src="demultiplex-summary-forward.png">
+                        <p>Download as PDF</p>
+                    </a>
+                
+            </div>
+        </div>
+    
+        <div class="col-lg-6">
+            <h3>Reverse Reads Frequency Histogram</h3>
+            <div class="text-center">
+                
+                    <p>No reads in this direction</p>
+                
+            </div>
+        </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Per-sample sequence counts</h1>
+        <h4>
+            Total Samples:&nbsp;
+            
+                
+                    73 (forward)&nbsp;
+                
+            
+                
+            
+        </h4>
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>forward sequence count</th>
+    </tr>
+    <tr>
+      <th>sample ID</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ec91140e.0862.4ece.bb4a.d114f4c42bdb</th>
+      <td>8918</td>
+    </tr>
+    <tr>
+      <th>20aa4aaf.8242.48d9.a225.e9f6b3e8938c</th>
+      <td>8667</td>
+    </tr>
+    <tr>
+      <th>55b26af1.31a6.4606.8b99.bf415a009311</th>
+      <td>8369</td>
+    </tr>
+    <tr>
+      <th>60345a80.4df2.4a0b.b7af.e2370c607aec</th>
+      <td>8097</td>
+    </tr>
+    <tr>
+      <th>104e5902.1c3e.417f.bb22.124bfca61a61</th>
+      <td>7952</td>
+    </tr>
+    <tr>
+      <th>65ba3877.ad29.4afc.aaec.bcf3544f5f75</th>
+      <td>7809</td>
+    </tr>
+    <tr>
+      <th>c784e063.e586.43cb.a602.9f2e2ae420d1</th>
+      <td>7683</td>
+    </tr>
+    <tr>
+      <th>b612f67e.eea8.4e03.81b7.034dbfc44669</th>
+      <td>7408</td>
+    </tr>
+    <tr>
+      <th>d7c251b8.15e9.4266.bcd8.6e6c6a453c11</th>
+      <td>7345</td>
+    </tr>
+    <tr>
+      <th>c18a0367.8148.4450.bf5a.507b6fe30c73</th>
+      <td>7183</td>
+    </tr>
+    <tr>
+      <th>72a8ae87.94ea.41e3.b43c.b5337f6a0548</th>
+      <td>7152</td>
+    </tr>
+    <tr>
+      <th>21a4ec1a.bcae.4e10.be82.66328d2dad4f</th>
+      <td>7084</td>
+    </tr>
+    <tr>
+      <th>fae97eb5.3264.4211.8ea3.823f547a6f0c</th>
+      <td>6985</td>
+    </tr>
+    <tr>
+      <th>c8b831af.2e3c.4aaa.83cf.b66c3016e0f3</th>
+      <td>6965</td>
+    </tr>
+    <tr>
+      <th>d6223d2e.0d62.4658.8eec.ccc9d4ee86a3</th>
+      <td>6789</td>
+    </tr>
+    <tr>
+      <th>2a1b28ba.f47e.44b6.bfd7.d3e41e762db3</th>
+      <td>6713</td>
+    </tr>
+    <tr>
+      <th>101c02ce.4f8d.4394.83a3.0c406831d934</th>
+      <td>6634</td>
+    </tr>
+    <tr>
+      <th>15129220.6eda.44ad.9511.be0f6e027f5d</th>
+      <td>6633</td>
+    </tr>
+    <tr>
+      <th>0bb5e24a.aa34.48e7.b1f9.e761ac2dc6b4</th>
+      <td>6621</td>
+    </tr>
+    <tr>
+      <th>ac7d2af0.9c75.4a32.bb2b.e79380ab8c61</th>
+      <td>5973</td>
+    </tr>
+    <tr>
+      <th>183645ce.cacd.4744.8440.de4eb377dfea</th>
+      <td>5908</td>
+    </tr>
+    <tr>
+      <th>35a8aef7.4bb0.4cab.bc0e.3576bb706571</th>
+      <td>5908</td>
+    </tr>
+    <tr>
+      <th>37f1087f.ae31.4fde.b96b.4b6c1d61351e</th>
+      <td>5758</td>
+    </tr>
+    <tr>
+      <th>7c66ff62.02e7.458d.a55d.8d07d15a9315</th>
+      <td>5639</td>
+    </tr>
+    <tr>
+      <th>b447da2d.f44f.4ced.ab9e.b560736484fb</th>
+      <td>5619</td>
+    </tr>
+    <tr>
+      <th>e94edb86.8fe0.42b8.a255.c48d4551405b</th>
+      <td>5457</td>
+    </tr>
+    <tr>
+      <th>b49ad14d.07c8.454d.82ec.c6fb9c7bcc36</th>
+      <td>5296</td>
+    </tr>
+    <tr>
+      <th>11c70d46.e0a4.4797.ad7b.3677fe93d73b</th>
+      <td>5204</td>
+    </tr>
+    <tr>
+      <th>884e1ddb.8d8b.45cf.8dba.16387520872c</th>
+      <td>5017</td>
+    </tr>
+    <tr>
+      <th>a6108908.5ef9.47ef.8f57.b055bc6ee7aa</th>
+      <td>4988</td>
+    </tr>
+    <tr>
+      <th>e4485061.924a.4f09.9d7e.bfefc780d1a8</th>
+      <td>4822</td>
+    </tr>
+    <tr>
+      <th>b1e40907.45fc.4d81.ad81.c58ed3d91e1f</th>
+      <td>4780</td>
+    </tr>
+    <tr>
+      <th>e5574c01.3027.458d.8f96.d68b66aae40b</th>
+      <td>4608</td>
+    </tr>
+    <tr>
+      <th>dfc347e3.eed7.4592.95eb.374724230326</th>
+      <td>4421</td>
+    </tr>
+    <tr>
+      <th>17f96e8a.dc68.4aef.98db.8aaaab702e33</th>
+      <td>4359</td>
+    </tr>
+    <tr>
+      <th>4b9ad407.fc2f.4463.bccc.0cf3a28d05f6</th>
+      <td>4348</td>
+    </tr>
+    <tr>
+      <th>8d2746d9.68e2.42e3.acfc.092603ad6ec1</th>
+      <td>4324</td>
+    </tr>
+    <tr>
+      <th>44ef59fb.3279.46dc.a113.c762aa889eb5</th>
+      <td>4256</td>
+    </tr>
+    <tr>
+      <th>36b313f7.8a44.4bdc.8034.82260a83d7b9</th>
+      <td>4222</td>
+    </tr>
+    <tr>
+      <th>df4b001a.f4cd.4b71.8ebe.a68b8df2cb80</th>
+      <td>4216</td>
+    </tr>
+    <tr>
+      <th>1fe57dd4.58b3.4fde.b8a1.f73db5614909</th>
+      <td>3986</td>
+    </tr>
+    <tr>
+      <th>8c4ae03d.dd8c.44ec.8336.15e0b031d97f</th>
+      <td>3982</td>
+    </tr>
+    <tr>
+      <th>e6dcb4be.68c0.473f.a9cb.412345eeb749</th>
+      <td>3850</td>
+    </tr>
+    <tr>
+      <th>61c3930c.61c4.4c82.8475.7a10ccaeb71c</th>
+      <td>3614</td>
+    </tr>
+    <tr>
+      <th>124dc1db.9029.41c6.afff.b73a692e19b1</th>
+      <td>3554</td>
+    </tr>
+    <tr>
+      <th>59d06f37.995b.40a5.91a8.c825d1a7ca6f</th>
+      <td>3495</td>
+    </tr>
+    <tr>
+      <th>90120dc2.ad2e.4916.a660.633ba4b6a7b8</th>
+      <td>3438</td>
+    </tr>
+    <tr>
+      <th>c61b44a5.ae92.4202.9d0c.b4507197e456</th>
+      <td>3224</td>
+    </tr>
+    <tr>
+      <th>6ecca0ea.049c.41ec.b324.404e504d44c0</th>
+      <td>3146</td>
+    </tr>
+    <tr>
+      <th>11c4be47.fdce.4135.8acf.0894f2da5ede</th>
+      <td>3049</td>
+    </tr>
+    <tr>
+      <th>98d36350.175c.439b.a534.27de6e5783ad</th>
+      <td>2986</td>
+    </tr>
+    <tr>
+      <th>683047f6.fe17.477f.9950.a6190ca34054</th>
+      <td>2840</td>
+    </tr>
+    <tr>
+      <th>873473f6.eef2.4718.b5f4.e88757055760</th>
+      <td>2799</td>
+    </tr>
+    <tr>
+      <th>c1a66804.c565.448a.8371.0c8e386f4969</th>
+      <td>2792</td>
+    </tr>
+    <tr>
+      <th>633bc9a7.b25f.475a.9bd3.858212b39d7d</th>
+      <td>2702</td>
+    </tr>
+    <tr>
+      <th>40112074.09e5.42b1.b332.17c9b89686e5</th>
+      <td>2694</td>
+    </tr>
+    <tr>
+      <th>212f0ce6.9123.4e38.abf3.db944de7f1c1</th>
+      <td>2687</td>
+    </tr>
+    <tr>
+      <th>11f3f37a.3698.4031.8183.75f6f2c6c04c</th>
+      <td>2664</td>
+    </tr>
+    <tr>
+      <th>fe826a14.1ed8.4d19.b14d.2233b960e1bc</th>
+      <td>2557</td>
+    </tr>
+    <tr>
+      <th>8cbe736d.b553.450d.af3c.d5ad08863390</th>
+      <td>2526</td>
+    </tr>
+    <tr>
+      <th>fa2e9bcc.cc53.4b83.ad1e.a308375854f5</th>
+      <td>2378</td>
+    </tr>
+    <tr>
+      <th>7e1f1b3f.4575.458c.9f42.287d03499e25</th>
+      <td>2354</td>
+    </tr>
+    <tr>
+      <th>bd64992d.87cc.464f.9e1b.9c0156ed65d8</th>
+      <td>2337</td>
+    </tr>
+    <tr>
+      <th>d623471b.5a0c.4291.a780.2ae6532752a9</th>
+      <td>2295</td>
+    </tr>
+    <tr>
+      <th>6519888d.bb69.495b.b4b8.07d0d4333455</th>
+      <td>2196</td>
+    </tr>
+    <tr>
+      <th>78ff0b74.3d7e.4ed5.8c2d.a5f77b793718</th>
+      <td>2189</td>
+    </tr>
+    <tr>
+      <th>595e93ed.e4b3.42b5.91b1.1ad4f31e7134</th>
+      <td>1916</td>
+    </tr>
+    <tr>
+      <th>e7a2370c.f80c.4703.b2ee.10c65967e05f</th>
+      <td>1910</td>
+    </tr>
+    <tr>
+      <th>98c66ce0.1f4c.422c.86e9.3561ea63b612</th>
+      <td>1765</td>
+    </tr>
+    <tr>
+      <th>2756472a.03f4.41da.8564.1d7538f949c6</th>
+      <td>1735</td>
+    </tr>
+    <tr>
+      <th>b986755d.b15a.4ad4.b6a2.0c7cdd9b8ced</th>
+      <td>1709</td>
+    </tr>
+    <tr>
+      <th>ea89c98c.42eb.484a.aed3.33711e20a6fe</th>
+      <td>1524</td>
+    </tr>
+    <tr>
+      <th>558a13e5.f4a8.47bc.a63e.47d6dffe528b</th>
+      <td>1208</td>
+    </tr>
+  </tbody>
+</table>
+        <a href="per-sample-fastq-counts.tsv">Download as TSV</a>
+    </div>
+</div>
+
+    </div>
+    
+    
+  </body>
+</html>
